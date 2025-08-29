@@ -14,7 +14,7 @@ text,ok = QInputDialog.getText(None,"You need root privileges","Password:",QLine
 if ok:
     password=text
 
-QInputDialog.getText()
+
 
 fixed_speed=window.spinBox.value()
 
