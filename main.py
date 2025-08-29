@@ -1,4 +1,4 @@
-from PySide6.QtWidgets import QApplication,QButtonGroup,QInputDialog
+from PySide6.QtWidgets import QApplication,QButtonGroup,QInputDialog,QLineEdit
 from PySide6.QtCore import QFile
 from PySide6.QtUiTools import QUiLoader
 import subprocess
@@ -10,9 +10,11 @@ file=QFile('fangui2.ui')
 window=loader.load(file)
 file.close
 
-text,ok = QInputDialog.getText(None,"You need root privileges","Password:")
+text,ok = QInputDialog.getText(None,"You need root privileges","Password:",QLineEdit.Password)
 if ok:
     password=text
+
+QInputDialog.getText()
 
 fixed_speed=window.spinBox.value()
 
